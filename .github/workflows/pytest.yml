@@ -31,7 +31,7 @@ jobs:
       - name: 📂 Asegurar que el directorio tests/ existe
         run: mkdir -p $GITHUB_WORKSPACE/tests/
 
-      - name: 🛠 Generar archivo de pruebas unitarias si no existe
+      - name: 🛠️ Generar archivo de pruebas unitarias si no existe
         run: |
           python $GITHUB_WORKSPACE/generate_tests.py
 
@@ -47,7 +47,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add tests/
           if git diff --cached --quiet; then
-            echo "⚠ No hay cambios nuevos en tests/, omitiendo commit."
+            echo "⚠️ No hay cambios nuevos en tests/, omitiendo commit."
           else
             git commit -m "🔧 Agregar archivos de prueba generados automáticamente"
             git push origin main
