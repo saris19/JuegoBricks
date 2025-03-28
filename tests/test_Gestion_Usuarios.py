@@ -1,5 +1,5 @@
 import pytest
-from main import SistemaUsuarios
+from src.Gestion_Usuarios import SistemaUsuarios
 
 def test_registro_usuario():
     sistema = SistemaUsuarios()

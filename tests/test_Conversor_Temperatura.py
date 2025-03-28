@@ -1,5 +1,7 @@
 import pytest
-from main import ConversorTemperatura
+from src.Conversor_Temperatura import ConversorTemperatura
+
+
 
 def test_celsius_a_fahrenheit():
     assert ConversorTemperatura.celsius_a_fahrenheit(0) == 32

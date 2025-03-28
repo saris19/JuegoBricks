@@ -1,5 +1,5 @@
 import pytest
-from main import CuentaBancaria
+from src.cuenta_bancaria import CuentaBancaria
 
 def test_depositar():
     cuenta = CuentaBancaria(100)
@@ -15,3 +15,4 @@ def test_retirar_sin_fondos():
     cuenta = CuentaBancaria(30)
     assert cuenta.retirar(50) == False
     assert cuenta.consultar_saldo() == 30
+
